@@ -1,6 +1,7 @@
 import Text from './components/composition/Text';
 import './App.css';
 import Emoji from './components/composition/Emoji';
+import Bracket from './components/composition/Bracket';
 
 
 function App() {
@@ -9,7 +10,11 @@ function App() {
     
     <Emoji>
       {
-        ({ addEmoji }) => <Text addEmoji={addEmoji} />
+        ({ addEmoji }) => (
+          <Bracket>
+            {({ addBracket }) => <Text addEmoji={addEmoji} addBracket={addBracket} />}
+          </Bracket>
+        )
       }
     </Emoji>
 

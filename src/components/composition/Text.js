@@ -1,13 +1,20 @@
 import React from 'react';
 
-const Text = ({ addEmoji }) => {
+const Text = ({ addEmoji, addBracket }) => {
 
-    const text = 'i am javascript programming language';
+    let text = 'i am javascript programming language';
+
+    if( addEmoji ){
+        text = addEmoji(text, '===');
+    }
+    if( addBracket ){
+        text = addBracket(text);
+    }
 
   return (
     <div>
         {
-            addEmoji ? addEmoji('Hello this is Composition', '===') : text
+         text
         }
     </div>
   )
