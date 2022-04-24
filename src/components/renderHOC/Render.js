@@ -13,12 +13,10 @@ export default class Render extends Component {
 
   render() {
 
-    const { render } = this.props;
+    const { children } = this.props;
     const { count } = this.state;
 
 
-    return (
-      <div>{ render(count, this.incrementCount) }</div>
-    )
+    return children(count, this.incrementCount)
   };
 }

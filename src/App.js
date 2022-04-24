@@ -22,9 +22,17 @@ function App() {
     </Emoji>  */}
 
 
-    <Render render={ (count, incrementCount) => <Student count={ count } incrementCount={ incrementCount } /> } />
+    <Render>
+      {
+        (count, incrementCount) => (<Student count={ count } incrementCount={ incrementCount } />)
+      }
+    </Render>
     
-    <Render render={ (count, incrementCount) => <User count={ count } incrementCount={ incrementCount } /> } />
+    <Render>
+      {
+        (count, incrementCount) => <User count={ count } incrementCount={ incrementCount } /> 
+      }
+    </Render>
 
 
 
